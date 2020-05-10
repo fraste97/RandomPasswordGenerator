@@ -1,6 +1,6 @@
 # RandomPasswordGenerator
 
-It's a simple program to generate strong random password
+It's a simple program to generate strong random password.
 
 ## How to install it
 
