@@ -21,11 +21,11 @@ char* pswGen(char *psw){
 		for(i = 0; i<LEN; i++){
 			randChar = randomChar();
 
-			if(randChar >= 97 & randChar <= 122) 
+			if(randChar > 96 & randChar < 123) 
 				letter++;
-			else if (randChar >= 48 & randChar <= 57)
+			else if (randChar > 47 & randChar < 58)
 				number++;
-			else if (randChar >= 65 & randChar <= 90)
+			else if (randChar > 64 & randChar < 91)
 				capLetter++;
 			else symbol++;
 		
