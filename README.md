@@ -8,4 +8,6 @@ It's a simple program to generate strong random password.
 1. Unzip it
 1. Compile the "RandomPasswordGenerator.c" file with a C compiler (i.e. GCC)
 
+## Requirement
 
+* A C compiler
