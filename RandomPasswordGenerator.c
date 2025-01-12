@@ -14,32 +14,32 @@ char* pswGen(char *psw){
 	int i, letter, capLetter, number, symbol;
 	char randChar;
 	
-	do{
+	while(letter == 0 || capLetter == 0 || number == 0 || symbol == 0) {
 
 		letter = 0, capLetter = 0, number = 0, symbol = 0;
 
 		for(i = 0; i<LEN; i++){
 			randChar = randomChar();
 
-			if(randChar > 96 & randChar < 123) 
+			if(randChar > 96 && randChar < 123) 
 				letter++;
-			else if (randChar > 47 & randChar < 58)
+			else if (randChar > 47 && randChar < 58)
 				number++;
-			else if (randChar > 64 & randChar < 91)
+			else if (randChar > 64 && randChar < 91)
 				capLetter++;
 			else symbol++;
 		
 			psw[i] = randChar;
 		}
-	}while(letter == 0 | capLetter == 0 | number == 0 | symbol == 0);
-
+	}
+	psw[LEN+1] = '\0';
 	return psw;
 }
 
 int main(void) {
   srand(time(NULL));
   
-  char psw[LEN];
+  char psw[LEN+1];
   printf("You random password is: %s\n", pswGen(psw));
 
   system("pause");
